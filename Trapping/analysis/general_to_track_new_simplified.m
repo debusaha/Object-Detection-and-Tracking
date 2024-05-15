@@ -1,7 +1,8 @@
-k = 35503;
+k = 34052;
 
-for k = 35503:36502
-    filename = ['C:\Users\itsde\Desktop\Trapping\Trapping\' num2str(k,'%d') '.jpg'];
+for k = 34052:36502
+    filename = ['C:\Users\itsde\OneDrive\git_repos\Object-Detection-and-Tracking\Trapping\images\' num2str(k,'%d') '.jpg'];
+    %filename = ['C:\Users\itsde\Desktop\Trapping\images\' num2str(k,'%d') '.jpg'];
 
     aa = imread(filename); % read the file
     figure(1), colormap('gray'), imagesc(aa);
@@ -21,6 +22,6 @@ for k = 35503:36502
     figure(4), imshow(BW, 'Colormap', [0 0 0; 1 1 1]);
     BW_image_uint8 = uint8(BW);
 
-    filename = ['C:\Users\itsde\Desktop\Trapping\MASK\' num2str(k,'%d') '.jpg'];
+    filename = ['C:\Users\itsde\OneDrive\git_repos\Object-Detection-and-Tracking\Trapping\masks\' num2str(k,'%d') '.jpg'];
     imwrite(BW_image_uint8, filename);
 end
